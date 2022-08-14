@@ -49,6 +49,21 @@ printLink(){
     }
 
 }
+reversePrint(){
+    struct Node *travel = head;
+    //Going to the last node
+    printf("Head is at %d\n", travel);
+    while(travel->next != NULL){
+        travel = travel->next;
+        //printf("travel is at %d\n", travel);
+    }
+    //now travel will be the last element
+
+    while(travel != NULL){
+        printf("The value is %d\n", travel->data);
+        travel = travel->prev;
+    }
+}
 int main()
 {
     int n,i,x =0;
@@ -57,6 +72,8 @@ int main()
     Insert(7,2);
     Insert(8,3);
     Insert(9,4);
-    printLink();
+    //printLink();
+    //Reverse();
+    reversePrint();
 
 }
