@@ -4,15 +4,15 @@
 int findingdigit(int arr[], int start, int len, int target){
     for(int i=0;i<len;i++){
         if(arr[i] == target){
-            return i+1;
+            return i;
         }
     }
 }
 
 int main(){
-    int arr[] = {1,2,2,2,3,4,4,4,4,4,5,5,5,5,5,6,7};
+    int arr[] = {2,4,5,5,5,5,5,7,9,9};
 
-    int target = 2;
+    int target = 5;
 
     //output should be [6,10]
     int ans[2] = {};
@@ -28,7 +28,7 @@ int main(){
         i--;
     }
 
-    ans[1] = i+1;
+    ans[1] = i;
     printf("%d %d", *ans, *(ans+1));
 
 
